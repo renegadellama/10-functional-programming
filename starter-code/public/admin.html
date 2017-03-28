@@ -12,10 +12,9 @@
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
     <!-- DONE: Setup a template for each row of the Author Stats section of this page: -->
     <script id="author-stats" type="text/x-handlebars">
-      <h1>Author Stats</h1>
         <li>{{author}}{{numWordsByAuthor}}</li>
     </script>
-  </head>
+  </head>Article
   <body>
     <header class="site-header clearfix">
       <section class="heading-group-h1 pull-left">
@@ -50,13 +49,13 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="/vendor/scripts/handlebars.js"></script>
-    <script src="/scripts/article.js"></script>
-    <script src="/scripts/articleView.js"></script>
-    <script>
+    <script type="text/javascript" src="/vendor/scripts/handlebars.js"></script>
+    <script type="text/javascript" src="/scripts/article.js"></script>
+    <scripttype="text/javascript"  src="/scripts/articleView.js"></script>
+    <script type="text/javascript">
       // TODO: After we fetch and load all the articles, what view function do we want to run next?
       // Let's pass in a callback function, to determine what happens AFTER all articles are loaded.
-      Article.fetchAll();
+      Article.fetchAll(articleView.initAdminPage);
     </script>
   </body>
 </html>
