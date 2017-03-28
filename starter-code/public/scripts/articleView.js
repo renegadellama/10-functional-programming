@@ -109,14 +109,14 @@
 
   articleView.initAdminPage = function() {
     // DONE: Call the Handlebars `.compile` function, which will return a function for you to use where needed.
-
+    console.log('in the initAdminPage');
     var source = $('#author-stats').html();
     var templateRender = Handlebars.compile(source);
 
     // REVIEW: We use `forEach` here because we are relying on the side-effects of the callback function:
     // appending to the DOM.
     // The callback is not required to return anything.
-    Article.numWordsByAuthor().forEach(stat => $('.author-stats').append(template(stat)));
+    Article.numWordsByAuthor().forEach(stat => $('.author-stats').append(templateRender(stat)));
 
     // REVIEW: Simply write the correct values to the page:
     $('#blog-stats .articles').text(Article.all.length);
@@ -125,4 +125,4 @@
   };
 
   module.articleView = articleView;
-}(window));
+})(window);
